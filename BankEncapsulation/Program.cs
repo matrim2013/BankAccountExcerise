@@ -6,13 +6,15 @@ namespace BankEncapsulation
     {
         static void Main(string[] args)
         {
-            var userAccount = new BankAccount();
-            Console.WriteLine("How much would you like to deposit?");
-            double depositAmount = double.Parse(Console.ReadLine());
+            var userAccount = new BankAccount(500);
+            
 
-            userAccount.Deposit(depositAmount);
+            userAccount.Deposit();
+            Console.WriteLine("   ");
+            userAccount.Withdraw();
+            Console.WriteLine("  ");
+            Console.WriteLine($"Your new balance is {userAccount.GetBalance(), 0:c} ");
 
-            Console.WriteLine($"Your new balance is {userAccount.GetBalance()} ");
 
           
         }
